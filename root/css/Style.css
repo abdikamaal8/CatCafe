@@ -15,9 +15,10 @@ header {
     padding: 20px 0;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
+/* Default settings for images in the header */
+header {
+    background-position: right top;
+    background-repeat: no-repeat;
 }
 
 /* Navigation styling */
@@ -72,6 +73,12 @@ main h4 {
     margin-bottom: 5px;
 }
 
+/* Responsive image settings */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Footer styling */
 footer {
     background-color: #00FF00; /* Lime */
@@ -84,8 +91,14 @@ footer {
     font-size: 0.9em;
 }
 
-/* Media queries for responsive design */
+/* Small screen rules */
 @media (max-width: 650px) {
+    header {
+        background-image: url('C:/Users/abdik/Desktop/CatCafe/root/images/LogoSmall.png'); /* Path to the small logo */
+        min-height: 50px;
+        
+    }
+
     header h1 {
         font-size: 2em;
     }
@@ -97,5 +110,12 @@ footer {
 
     main {
         padding: 10px;
+    }
+}
+/* Large screen rules */
+@media (min-width: 651px) {
+    header {
+        background-image:  url('C:/Users/abdik/Desktop/CatCafe/root/images/LogoLarge.png');
+        min-height: 100px;
     }
 }
