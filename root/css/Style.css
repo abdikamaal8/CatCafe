@@ -94,7 +94,7 @@ footer {
 /* Small screen rules */
 @media (max-width: 650px) {
     header {
-        background-image: url('C:/Users/abdik/Desktop/CatCafe/root/images/LogoSmall.png'); /* Path to the small logo */
+        background-image: url("../images/LogoSmall.png"); /* Path to the small logo */
         min-height: 50px;
         
     }
@@ -115,7 +115,7 @@ footer {
 /* Large screen rules */
 @media (min-width: 651px) {
     header {
-        background-image:  url('C:/Users/abdik/Desktop/CatCafe/root/images/LogoLarge.png');
+        background-image:  url("../images/LogoLarge.png");
         min-height: 100px;
     }
 }
