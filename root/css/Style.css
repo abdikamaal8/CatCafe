@@ -3,28 +3,24 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #FFF7EF; /* Soft Cream */
+    color: #636563; /* Slate Gray for text */
 }
 
 /* Header styling */
 header {
-    background-color: #008000; /* Green */
-    color: #000000;
+    background-color: #6B824A; /* Olive Green */
+    color: #000000; /* Black text */
     text-align: center;
     padding: 20px 0;
-}
-
-/* Default settings for images in the header */
-header {
     background-position: right top;
     background-repeat: no-repeat;
 }
 
 /* Navigation styling */
 nav {
-    background-color: #fff;
-    border-bottom: 2px solid #ffb6c1;
+    background-color: #fff; /* White background for contrast */
+    border-bottom: 2px solid #FFC3CE; /* Soft Pink border */
     padding: 10px 0;
 }
 
@@ -41,9 +37,18 @@ nav ul li {
     font-size: 1.2em;
 }
 
-nav ul li:hover {
-    color: #ff1493;
-    cursor: pointer;
+nav ul li a {
+    color: #636563; /* Slate Gray */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FFC3CE; /* Soft Pink on hover */
+    font-size: 1.1em;
+}
+
+nav ul li a:visited {
+    color: #2E8B57; /* Olive Green for visited links */
 }
 
 /* Main content styling */
@@ -51,13 +56,13 @@ main {
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 main h1 {
-    color: #ff1493;
+    color: #000000; /* Black for main headings */
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -68,7 +73,7 @@ main p {
 }
 
 main h4 {
-    color: #ff1493;
+    color: #000000; /* Black for subheadings */
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -81,12 +86,100 @@ img {
 
 /* Footer styling */
 footer {
-    background-color: #00FF00; /* Lime */
-    color: #000000;
+    background-color: #D6E3B5; /* Pale Green */
+    color: #636563; /* Slate Gray */
     text-align: center;
     padding: 15px 0;
-    position: fixed;
-    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Aside Section Styling */
+aside {
+    background-color: #D6E3B5; /* Pale Green */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #636563; /* Slate Gray */
+}
+
+/* Menu Title Styling */
+.menu-title {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+}
+
+/* Section Styling for Menu Content */
+.menu-section {
+    background-color: #FFF7EF; /* Soft Cream */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Allergy Information Styling */
+.allergy-info {
+    font-weight: bold;
+    color: #636563;
+    margin-top: 20px;
+}
+
+/* Description List Styling for Menu Items */
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    font-style: italic;
+    margin-left: 20px;
+}
+
+/* Styling for <ul> in Menu */
+ul {
+    list-style-type: none; /* Remove bullets */
+    font-size: 1.25em; /* Slightly larger text */
+}
+
+/* Cat Hosts Container Styling */
+.cat-hosts-container {
+    background-color: #D6E3B5; /* Pale Green */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Cat Image Styling */
+.cat-host {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cat-image {
+    border-radius: 50%;
+    border: 2px solid #FFC3CE; /* Soft Pink border */
+    width: 80px; /* Small screen */
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 651px) {
+    .cat-image {
+        width: 180px; /* Large screen */
+        height: 180px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #D6E3B5; /* Pale Green */
+    color: #636563; /* Slate Gray */
+    text-align: center;
+    padding: 15px 0;
     width: 100%;
     font-size: 0.9em;
 }
@@ -96,7 +189,7 @@ footer {
     header {
         background-image: url("../images/LogoSmall.png"); /* Path to the small logo */
         min-height: 50px;
-        
+        background-color: #D6E3B5; /* Pale Green */
     }
 
     header h1 {
@@ -112,10 +205,12 @@ footer {
         padding: 10px;
     }
 }
+
 /* Large screen rules */
 @media (min-width: 651px) {
     header {
-        background-image:  url("../images/LogoLarge.png");
+        background-image: url("../images/LogoLarge.png");
         min-height: 100px;
+        background-color: #6B824A; /* Olive Green */
     }
 }
