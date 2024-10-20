@@ -2,68 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/Style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Chez Fur</title>
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
     <header>
         <h1>Chez Fur</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="hosts.html">Our Hosts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="clearfix">
+        <!-- Left column for navigation and aside -->
+        <div class="column left">
+            <!-- Navigation -->
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="hosts.html">Our Hosts</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-    <main>
-        <!-- Aside Section -->
-        <aside>
-            Enjoy our food while you visit with our friendly hosts! We have selections for appetites big and small.
-        </aside>
-
-        <h1 class="menu-title">Menu</h1>
-
-        <!-- Menu Section -->
-        <div class="menu-section">
-            <!-- Description Lists for Menu Items -->
-            <h2>Nibbles</h2>
-            <dl>
-                <dt>Purrfect Salad</dt>
-                <dd>Small salad with arugula, tomatoes, carrots, cucumber, and crunchy croutons with vinaigrette dressing. Add just a pinch of catnip for a minty touch -- Sure to get our hosts’ attention. $7</dd>
-
-                <dt>Kitty's Delight</dt>
-                <dd>Grilled cheese with a blend of gouda and cheddar. $5</dd>
-            </dl>
-
-            <h2>Fancy Feasts</h2>
-            <dl>
-                <dt>Too Too Tuna</dt>
-                <dd>A favorite among all our hosts. Fresh Albacore Tuna with lettuce, tomato, vegan mayo, and your choice of white, wheat, or gluten-free white bread. $12</dd>
-
-                <dt>Catnip Burger</dt>
-                <dd>Veggie patty infused with a hint of catnip, served with fries. $9</dd>
-            </dl>
-
-            <h2>Treats</h2>
-            <dl>
-                <dt>Cat Pop</dt>
-                <dd>Classic vanilla Cake Pop with chocolate icing “fur,” and white icing whiskers. Also available in chocolate cake. $3</dd>
-
-                <dt>Whisker Cookies</dt>
-                <dd>Soft-baked cookies in a variety of flavors. $2</dd>
-            </dl>
-
-            <!-- Allergy Information -->
-            <div class="allergy-info">
-                Please let our staff know of any food sensitivities before ordering.
-            </div>
+            <!-- Aside Section -->
+            <aside>
+                Enjoy our food while you visit with our friendly hosts! We have selections for appetites big and small.
+            </aside>
         </div>
-    </main>
+
+        <!-- Right column for image and menu items -->
+        <div class="column right">
+            <!-- Image placed above the menu -->
+            <img src="../images/menu_image.jpeg" alt="Chez Fur Menu Image" class="menu-image">
+
+            <!-- Menu content -->
+            <main>
+                <h1 class="menu-title">Menu</h1>
+
+                <!-- Menu Section -->
+                <div class="menu-section">
+                    <h2>Nibbles</h2>
+                    <dl>
+                        <dt>Purrfect Salad</dt>
+                        <dd>Small salad with arugula, tomatoes, carrots, cucumber, and crunchy croutons with vinaigrette dressing. Add just a pinch of catnip for a minty touch -- Sure to get our hosts’ attention. $7</dd>
+
+                        <dt>Kitty's Delight</dt>
+                        <dd>Grilled cheese with a blend of gouda and cheddar. $5</dd>
+                    </dl>
+
+                    <h2>Fancy Feasts</h2>
+                    <dl>
+                        <dt>Too Too Tuna</dt>
+                        <dd>A favorite among all our hosts. Fresh Albacore Tuna with lettuce, tomato, vegan mayo, and your choice of white, wheat, or gluten-free white bread. $12</dd>
+
+                        <dt>Catnip Burger</dt>
+                        <dd>Veggie patty infused with a hint of catnip, served with fries. $9</dd>
+                    </dl>
+
+                    <h2>Treats</h2>
+                    <dl>
+                        <dt>Cat Pop</dt>
+                        <dd>Classic vanilla Cake Pop with chocolate icing “fur,” and white icing whiskers. Also available in chocolate cake. $3</dd>
+
+                        <dt>Whisker Cookies</dt>
+                        <dd>Soft-baked cookies in a variety of flavors. $2</dd>
+                    </dl>
+
+                    <!-- Allergy Information -->
+                    <div class="allergy-info">
+                        Please let our staff know of any food sensitivities before ordering.
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Chez Fur | Contact us: info@chezfur.com</p>

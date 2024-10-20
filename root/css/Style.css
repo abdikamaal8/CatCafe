@@ -17,38 +17,133 @@ header {
     background-repeat: no-repeat;
 }
 
-/* Navigation styling */
-nav {
-    background-color: #fff; /* White background for contrast */
-    border-bottom: 2px solid #FFC3CE; /* Soft Pink border */
-    padding: 10px 0;
+/* Navigation styling for menu.html */
+.menu-nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.menu-nav li {
+    margin-bottom: 10px; /* Spacing between links */
+}
+
+.menu-nav a {
+    display: block;
+    background-color: #D6E3B5; /* Pale Green */
+    color: #636563; /* Slate Gray */
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.menu-nav a:hover {
+    background-color: #FFC3CE; /* Soft Pink on hover */
+}
+
+/* Small screens - Horizontal navigation */
+@media (max-width: 650px) {
+    .menu-nav ul {
+        display: flex; /* Ensure Flexbox is applied */
+        flex-direction: row; /* Switch to horizontal layout */
+        justify-content: space-around; /* Space links evenly */
+        padding: 0; /* Reset padding */
+        margin: 0; /* Reset margin */
+        list-style-type: none; /* Remove bullets */
+    }
+
+    .menu-nav li {
+        margin-bottom: 0;
+        margin-right: 10px; /* Add space between horizontal links */
+    }
+
+    .menu-nav li:last-child {
+        margin-right: 0; /* Remove margin for the last item */
+    }
+
+    .menu-nav li a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        background-color: #D6E3B5; /* Same Pale Green background */
+        text-align: center; /* Center the text */
+        border-radius: 5px;
+        display: block; /* Make the links behave like buttons */
+    }
+}
+
+/* Wrapper for nav and main */
+.wrapper {
+  display: flex; /* Set up Flexbox for nav and main */
+}
+
+/* Navigation container (Flexbox) */
+.navcontainer {
+    display: flex;
+    flex-direction: column; /* Vertical orientation on large screens */
+    justify-content: center;
+    background-color: #6B824A; /* Olive Green */
+    height: 100vh; /* Full height for large screens */
+    padding: 20px;
+}
+
+.navcontainer a {
+    background-color: #D6E3B5; /* Pale Green */
+    color: #636563; /* Slate Gray */
+    text-decoration: none;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Spacing between links */
+}
+
+.navcontainer a:hover {
+    background-color: #FFC3CE; /* Soft Pink on hover */
+}
+
+/* Small screens - Horizontal navigation */
+@media (max-width: 650px) {
+    .navcontainer {
+        flex-direction: row; /* Switch to horizontal on small screens */
+        justify-content: center; /* Evenly spaced */
+        height: auto; /* Remove height for small screens */
+    }
+
+    .navcontainer a {
+        margin-bottom: 0;
+        margin-right: 10px; /* Add space between horizontal links */
+    }
+}
+
+/* Flexbox for Cat Hosts and Sponsors */
+.cat-hosts-gallery, .sponsor-gallery {
+    display: flex;
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allows the items to wrap onto new rows */
+    gap: 20px; /* Adds spacing between items */
+    padding: 20px;
+}
+
+.cat-hosts-gallery figure, .sponsor-gallery a {
+    flex: 1 1 200px; /* Items will shrink/grow, min size 200px */
+    max-width: 300px; /* Ensure each item has an upper limit */
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-    font-size: 1.2em;
+.cat-hosts-gallery img, .sponsor-gallery img {
+    width: 100%; /* Make images responsive and fill container */
+    max-width: 100px; /* Uniform size for the images */
+    height: auto;
 }
 
-nav ul li a {
-    color: #636563; /* Slate Gray */
-    text-decoration: none;
-}
+/* Responsive adjustments for small screens */
+@media (max-width: 650px) {
+  .cat-hosts-gallery figure, .sponsor-gallery a {
+    flex: 1 1 100%; /* Take up full width on small screens */
+  }
 
-nav ul li a:hover {
-    color: #FFC3CE; /* Soft Pink on hover */
-    font-size: 1.1em;
-}
-
-nav ul li a:visited {
-    color: #2E8B57; /* Olive Green for visited links */
+  .cat-hosts-gallery img, .sponsor-gallery img {
+    max-width: 80px; /* Scale down images on small screens */
+  }
 }
 
 /* Main content styling */
@@ -59,6 +154,7 @@ main {
     background-color: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll; /* Adds scroll functionality */
 }
 
 main h1 {
@@ -91,15 +187,85 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
+    clear: both; /* Clears floated columns */
+}
+
+/* Two-column layout for large screens */
+@media (min-width: 651px) {
+    .page-layout {
+        display: flex;
+    }
+    
+    .page-layout nav {
+        height: 100vh;
+    }
+
+    .page-layout main {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .column {
+        float: left;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .left {
+        width: 25%;
+    }
+
+    .right {
+        width: 70%;
+    }
+
+    header {
+        background-image: url("../images/LogoLarge.png");
+        min-height: 100px;
+        background-color: #6B824A; /* Olive Green */
+    }
+}
+
+/* Small screen (single-column layout) */
+@media (max-width: 650px) {
+    header {
+        background-image: url("../images/LogoSmall.png");
+        min-height: 50px;
+        background-color: #D6E3B5; /* Pale Green */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .page-layout {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Footer adjustments */
+footer {
+    clear: both;
+    text-align: center;
 }
 
 /* Aside Section Styling */
 aside {
-    background-color: #D6E3B5; /* Pale Green */
+    background-color: #D6E3B5;
     padding: 10px;
     border-radius: 8px;
+    border: 2px solid #636563;
     margin-bottom: 20px;
-    color: #636563; /* Slate Gray */
 }
 
 /* Menu Title Styling */
@@ -110,7 +276,7 @@ aside {
 
 /* Section Styling for Menu Content */
 .menu-section {
-    background-color: #FFF7EF; /* Soft Cream */
+    background-color: #FFF7EF;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
@@ -137,19 +303,28 @@ dl dd {
 
 /* Styling for <ul> in Menu */
 ul {
-    list-style-type: none; /* Remove bullets */
-    font-size: 1.25em; /* Slightly larger text */
+    list-style-type: none;
+    font-size: 1.25em;
+}
+/* Styling the menu image as a banner */
+.menu-image {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Keep the aspect ratio */
+    max-height: 300px; /* Set a maximum height for the banner */
+    object-fit: cover; /* Ensures the image covers the banner area without distorting */
+    margin-bottom: 20px; /* Adds space below the image */
+    border-radius: 10px; /* Optional: Rounded corners */
 }
 
 /* Cat Hosts Container Styling */
 .cat-hosts-container {
-    background-color: #D6E3B5; /* Pale Green */
+    background-color: #D6E3B5;
     padding: 15px;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     width: 90%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -161,56 +336,46 @@ ul {
 
 .cat-image {
     border-radius: 50%;
-    border: 2px solid #FFC3CE; /* Soft Pink border */
-    width: 80px; /* Small screen */
-    height: 80px;
+    border: 2px solid #FFC3CE;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
-
-@media (min-width: 651px) {
-    .cat-image {
-        width: 180px; /* Large screen */
-        height: 180px;
-    }
+/* Sponsor Box at the top */
+.sponsor-box {
+  background-color: #FFF7EF; /* Soft Cream */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between sponsor and cat sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center; /* Center the contents */
 }
 
-/* Footer Styling */
-footer {
-    background-color: #D6E3B5; /* Pale Green */
-    color: #636563; /* Slate Gray */
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
-    font-size: 0.9em;
+/* Flexbox for Sponsors */
+.sponsor-gallery {
+  display: flex;
+  justify-content: center; /* Center the sponsor images */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Space between sponsor items */
 }
 
-/* Small screen rules */
+.sponsor-gallery a {
+  flex: 1 1 100px; /* Allow the images to shrink/grow */
+}
+
+.sponsor-gallery img {
+  max-width: 100px; /* Ensure uniform image size */
+  height: auto;
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Responsive adjustments for small screens */
 @media (max-width: 650px) {
-    header {
-        background-image: url("../images/LogoSmall.png"); /* Path to the small logo */
-        min-height: 50px;
-        background-color: #D6E3B5; /* Pale Green */
-    }
+  .sponsor-gallery a {
+    flex: 1 1 100%; /* Full width for each sponsor item on small screens */
+  }
 
-    header h1 {
-        font-size: 2em;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 10px;
-    }
-}
-
-/* Large screen rules */
-@media (min-width: 651px) {
-    header {
-        background-image: url("../images/LogoLarge.png");
-        min-height: 100px;
-        background-color: #6B824A; /* Olive Green */
-    }
+  .sponsor-gallery img {
+    max-width: 80px; /* Scale down sponsor images on small screens */
+  }
 }
