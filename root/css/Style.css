@@ -428,3 +428,58 @@ ul {
         grid-column: span 2; /* Full width for small screens */
     }
 }
+/* Form container styling */
+form {
+    background-color: #D6E3B5; /* Pale Green, matching the site theme */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style for all labels */
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #636563; /* Slate Gray text color */
+}
+
+/* Style for all input fields and select elements */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #6B824A; /* Olive Green border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Specific styling for textarea to match other inputs */
+form textarea {
+    resize: vertical; /* Allows vertical resizing */
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    width: 100%;
+    background-color: #6B824A; /* Olive Green background */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hover effect for submit button */
+form input[type="submit"]:hover {
+    background-color: #FFC3CE; /* Soft Pink on hover */
+}

@@ -79,7 +79,12 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Chez Fur | Contact us: info@chezfur.com</p>
-    </footer>
+    <p>&copy; 2024 Chez Fur | Contact us: info@chezfur.com</p>
+    <p id="currentDate"></p>
+    <script>
+        document.getElementById("currentDate").textContent = new Date().toDateString();
+    </script>
+</footer>
+
 </body>
 </html>

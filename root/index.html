@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/Style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/welcomeAlert.js"></script>
+
     <title>Chez Fur</title>
 </head>
 <body>
@@ -37,8 +39,13 @@
  </div>
 
     <footer>
-    <p>&copy; 2024 Chez Fur | Contact us: <a href="mailto:info@chezfur.com">info@chezfur.com</a></p>
+    <p>&copy; 2024 Chez Fur | Contact us: info@chezfur.com</p>
+    <p id="currentDate"></p>
+    <script>
+        document.getElementById("currentDate").textContent = new Date().toDateString();
+    </script>
 </footer>
+
 
 </body>
 </html>
