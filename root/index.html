@@ -2,50 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Link to the site's main CSS stylesheet for styling -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Ensure the page is responsive on all screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the JavaScript file that displays a welcome alert on page load -->
     <script src="scripts/welcomeAlert.js"></script>
 
     <title>Chez Fur</title>
 </head>
 <body>
+    <!-- Header section with the site's main title -->
     <header>
         <h1>Chez Fur</h1>
-     </header>
+    </header>
 
- <div class="page-layout">
-    <nav class="navcontainer">
-        <a href="index.html">Home</a>
-        <a href="pages/menu.html">Menu</a>
-        <a href="pages/hosts.html">Our Hosts</a>
-        <a href="pages/adoptions.html">Adoptions</a>
-        <a href="pages/contact.html">Contact</a>
-    </nav>
+    <!-- Main container for page layout with navigation and main content -->
+    <div class="page-layout">
+        <!-- Navigation links for different pages within the site -->
+        <nav class="navcontainer">
+            <a href="index.html">Home</a>
+            <a href="pages/menu.html">Menu</a>
+            <a href="pages/hosts.html">Our Hosts</a>
+            <a href="pages/adoptions.html">Adoptions</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
 
+        <!-- Main content section -->
+        <main>
+            <h1>Welcome to Chez Fur</h1>
+            <p>Chez Fur is a café that offers not just coffee and great food but also a chance to interact with a wonderful clowder of cats. The cats are all healthy and screened for general friendliness toward the fur-free two-legged guests of the café.</p>
+            <p>For guests lucky enough to be chosen by one of the cats (they do tend to be picky), adoption screening and placement is possible.</p>
 
-    <main>
-        
-        <h1>Welcome to Chez Fur</h1>
-        <p>Chez Fur is a café that offers not just coffee and great food but also a chance to interact with a wonderful clowder of cats. The cats are all healthy and screened for general friendliness toward the fur-free two-legged guests of the café.</p>
-        <p>For guests lucky enough to be chosen by one of the cats (they do tend to be picky), adoption screening and placement is possible.</p>
+            <!-- Location and contact information for Chez Fur -->
+            <h4>Chez Fur Location</h4>
+            <p>
+                123 Cat Street<br>
+                Fur City, ME 45678<br>
+                Phone: (123) 456-7890
+            </p>
+        </main>
+    </div>
 
-        <h4>Chez Fur Location</h4>
-        <p>
-            123 Cat Street<br>
-            Fur City, ME 45678<br>
-            Phone: (123) 456-7890
-        </p>
-    </main>
- </div>
-
+    <!-- Footer section with copyright, contact, and current date display -->
     <footer>
-    <p>&copy; 2024 Chez Fur | Contact us: info@chezfur.com</p>
-    <p id="currentDate"></p>
-    <script>
-        document.getElementById("currentDate").textContent = new Date().toDateString();
-    </script>
-</footer>
-
-
+        <p>&copy; 2024 Chez Fur | Contact us: <a href="mailto:info@chezfur.com">info@chezfur.com</a></p>
+        
+        <!-- Display the current date using JavaScript -->
+        <p id="currentDate"></p>
+        
+        <!-- Inline JavaScript to set the current date in the footer -->
+        <script>
+            // Gets the current date and displays it in the "currentDate" element
+            document.getElementById("currentDate").textContent = new Date().toDateString();
+        </script>
+    </footer>
 </body>
 </html>
