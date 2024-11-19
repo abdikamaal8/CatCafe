@@ -2,15 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Link to the site's main CSS stylesheet for styling -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Ensure the page is responsive on all screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Link to the JavaScript file that displays a welcome alert on page load -->
+    <link rel="stylesheet" href="css/style.css">
     <script src="scripts/welcomeAlert.js"></script>
-
     <title>Chez Fur</title>
 </head>
 <body>
@@ -36,6 +30,25 @@
             <p>Chez Fur is a café that offers not just coffee and great food but also a chance to interact with a wonderful clowder of cats. The cats are all healthy and screened for general friendliness toward the fur-free two-legged guests of the café.</p>
             <p>For guests lucky enough to be chosen by one of the cats (they do tend to be picky), adoption screening and placement is possible.</p>
 
+            <!-- Add Videos Section -->
+            <section>
+                <h2>Experience Chez Fur</h2>
+                
+                <!-- Video 1 -->
+                <!-- Video by Pixabay from Pexels: https://www.pexels.com/video/cat-eating-854840/ -->
+                <video autoplay muted loop controls>
+                    <source src="media/cat.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Video 2 -->
+                <!-- Video by KoolShooters from Pexels: https://www.pexels.com/video/a-person-giving-food-to-a-pomeranian-7683653/ -->
+                <video autoplay muted loop controls>
+                    <source src="media/dog.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
             <!-- Location and contact information for Chez Fur -->
             <h4>Chez Fur Location</h4>
             <p>
@@ -52,10 +65,7 @@
         
         <!-- Display the current date using JavaScript -->
         <p id="currentDate"></p>
-        
-        <!-- Inline JavaScript to set the current date in the footer -->
         <script>
-            // Gets the current date and displays it in the "currentDate" element
             document.getElementById("currentDate").textContent = new Date().toDateString();
         </script>
     </footer>

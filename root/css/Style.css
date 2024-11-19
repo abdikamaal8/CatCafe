@@ -418,6 +418,10 @@ ul {
         grid-column: span 3; /* Full width for wide and long items on smaller screens */
         grid-row: auto; /* Reset row span for smaller screens */
     }
+
+    video {
+        max-width: 90%; /* Fit most of the screen width */
+    }
 }
 
 @media (max-width: 500px) {
@@ -483,3 +487,56 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #FFC3CE; /* Soft Pink on hover */
 }
+/* General video styles */
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+/* Hover effect for video elements */
+video:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+/* Add a custom play button overlay */
+video::before {
+    content: '▶'; /* Unicode for play button */
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none; /* Allow interaction with the video */
+    display: none; /* Hidden by default */
+}
+
+/* Display the play button overlay when the video is paused */
+video[paused]::before {
+    display: block;
+}
+
+/* Style for larger screens */
+@media (min-width: 768px) {
+    video {
+        max-width: 800px;
+        border-radius: 15px; /* Adjusted for larger videos */
+    }
+}
+
+/* Style for smaller screens */
+@media (max-width: 480px) {
+    video {
+        max-width: 90%;
+        border-radius: 5px; /* Smaller rounding for tighter screens */
+    }
+}
+
